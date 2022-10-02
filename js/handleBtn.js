@@ -30,4 +30,10 @@ $(document).ready(function ($) {
      $(".courses-register").sortable({
           connectWith: ".courses-all",
      });
+
+     
+     $(".btn-submit").on("click", function (e) {
+          e.preventDefault();
+          validation()
+     })
 });
