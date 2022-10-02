@@ -33,7 +33,6 @@ function validation() {
      return flag;
 }
 
-
 function showError(selector) {
      selector.style.border = "2px solid red";
 }
@@ -50,10 +49,10 @@ function checkId(selector) {
 
 function checkMoreThan2Words(string) {
      var arrString = string.trim();
-     var count = 0 ;
-     for(let i = 0; i < arrString.length; i++) 
-          if(arrString[i] === ' ') count++; 
-     if(count >= 1) return true;
+     var count = 0;
+     for (let i = 0; i < arrString.length; i++)
+          if (arrString[i] === " ") count++;
+     if (count >= 1) return true;
      return false;
 }
 function checkPhone(selector) {
@@ -67,4 +66,3 @@ function checkEmail(selector) {
      if (!regex.test(selector.value)) return false;
      return true;
 }
-

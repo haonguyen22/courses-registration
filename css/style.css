@@ -289,6 +289,7 @@ i.arrow_minimize:before {
 /* Footer */
 .footer {
      display: flex;
+     flex-direction: row;
      align-items: center;
      justify-content: center;
      height: 1.5em;
@@ -298,7 +299,9 @@ i.arrow_minimize:before {
      border-radius: 4px;
      color: rgb(255, 150, 47);
 }
-
+.nav__footer {
+     display: flex;
+}
 .footer p {
      margin: 0;
      margin-right: 20px;
