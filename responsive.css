@@ -1,0 +1,33 @@
+@media only screen and (max-width: 900px) {
+     .content {
+          display: flex;
+          flex-direction: column;
+     }
+     .main { 
+          width: 100%;
+     }
+     .form__group {
+          width: 100%;
+          float: none;
+     }
+     .form__item label {
+          flex: 0.5;
+     }
+     .side {
+          display: block;
+          width: 100%;
+     }
+     .footer {
+          height: fit-content;
+          flex-direction: column;
+     }
+     .footer p {
+          display: block;
+          width: 100%;
+          text-align: center;
+          margin: 10px 0;
+     }
+     .nav__footer {
+          margin-bottom: 10px;
+     }
+}

@@ -29,6 +29,7 @@ body {
 
 .selected {
      background-color: rgb(255, 130, 7) !important;
+     color: #fff;
 }
 
 .float-left {
