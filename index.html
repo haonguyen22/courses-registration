@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+     <link rel="stylesheet" href="./base.css">
+     <link rel="stylesheet" href="./style.css">
+     <title>Đăng ký học phần</title>
+</head>
+
+<body>
+     <div class="container">
+          <div class="title">
+               <div class="header">
+                    <h3>Bài tập 1 - 20120470</h3>
+               </div>
+               <div class="nav">
+                    <div class="nav_btns">
+                         <a href="#" class="menu active">Menu 1</a>
+                         <a href="#" class="menu">Menu 2</a>
+                         <a href="#" class="menu">Menu 3</a>
+                         <a href="#" class="menu">Menu 4</a>
+                         <a href="#" class="menu">Menu 5</a>
+                    </div>
+               </div>
+          </div>
+
+          <hr style="background-color: rgb(101, 154, 228); margin-bottom: 0;" />
+          <div class="content">
+               <div class="main">
+                    <form action="" method="post" id="form">
+                         <div class="main__title">
+                              <h3>Đăng ký học phần</h3>
+                         </div>
+                         <hr />
+                         <div class="form__group">
+                              <div class="form__item">
+                                   <label for="id">Mã số: </label>
+                                   <input type="text" name="id" id="id"
+                                        placeholder="Gồm 8 kí tự và 2 số bắt đầu từ 17-22">
+                              </div>
+                              <div class="form__item">
+                                   <label for="name">Họ và tên: </label>
+                                   <input type="text" name="name" id="name" placeholder="Có ít nhất 2 words">
+                              </div>
+                              <div class="form__item">
+                                   <label for="address">Địa chỉ: </label>
+                                   <input type="text" name="address" id="address" placeholder="Có ít nhất 2 words">
+                              </div>
+                              <div class="form__item">
+                                   <label for="phone">Điện thoại: </label>
+                                   <input type="text" name="phone" id="phone"
+                                        placeholder="Gồm 10 số và bắt đầu là chữ số 0">
+                              </div>
+                              <div class="form__item">
+                                   <label for="sex">Giới tính: </label>
+                                   <div class="sex__radio">
+                                        <input type="radio" name="sex" id="sex" value="Nam" checked>
+                                        <label for="male" class="sex__label">Nam</label>
+                                        <input type="radio" name="sex" id="sex" value="Nữ">
+                                        <label for="female" class="sex__label">Nữ</label>
+                                   </div>
+                              </div>
+                              <div class="form__item">
+                                   <label for="birthdate">Ngày sinh: </label>
+                                   <input type="date" name="birthdate" id="birthdate">
+                              </div>
+                              <div class="form__item">
+                                   <label for="email">Email: </label>
+                                   <input type="email" name="email" id="email"
+                                        placeholder="Vd: 20120470@student.hcmus.edu.vn">
+                              </div>
+                         </div>
+
+                         <div class="registration">
+                              <div class="courses__all">
+                                   <div class="courses__header">
+                                        <h5>Các môn học</h5>
+                                        <div class="courses__list">
+                                             <ul name="courses" id="courses" class="courses-all connect">
+                                                  <li value="lthdt">Lập trình hướng đối tượng</li>
+                                                  <li value="ctdlgt">Cấu trúc dữ liệu và giải thuật</li>
+                                                  <li value="window">Lập trình window</li>
+                                                  <li value="nmcnpm">Nhập môn công nghệ phần mềm</li>
+                                                  <li value="ai">Trí tuệ nhân tạo</li>
+                                                  <li value="web">Phát triển ứng dụng web</li>
+                                                  <li value="csdl">Cơ sở dữ liệu</li>
+                                                  <li value="nmlt">Nhập môn lập trình</li>
+                                                  <li value="ktlt">Kỹ thuật lập trình</li>
+                                                  <li value="java">Lập trình ứng dụng Java</li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="btn__tranfer">
+                                   <input type='button' id='btn-right' class="btn" value='>' />
+                                   <input type='button' id='btn-right-right' class="btn" value='>>' />
+                                   <input type='button' id='btn-left' class="btn" value='<' />
+                                   <input type='button' id='btn-left-left' class="btn" value='<<' />
+                              </div>
+                              <div class="courses__register">
+                                   <div class="courses__header">
+                                        <h5 class="float-left">Các môn học đã chọn</h5>
+                                        <div class="courses__list">
+                                             <ul multiple="multiple" name="courses" id="courses"
+                                                  class="courses-register connect">
+                                             </ul>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="buttons">
+                              <button type="submit" class="btn btn-submit">Đăng ký</button>
+                              <button type="reset" class="btn btn-reset">Xóa hết</button>
+                         </div>
+                    </form>
+                    <hr style="background-color: rgba(0, 0, 0, 0.1);" />
+                    <table class="register__table">
+                         <thead>
+                              <th>Mã số</th>
+                              <th>Họ và tên</th>
+                              <th>Giới tính</th>
+                              <th>Ngày sinh</th>
+                         </thead>
+                         <tbody>
+                              <tr>
+                                   <td>20120001</td>
+                                   <td>Nguyễn Thị A</td>
+                                   <td>Nữ</td>
+                                   <td>07/08/2002</td>
+                              </tr>
+                              
+                              <tr>
+                                   <td>20120123</td>
+                                   <td>Trần Văn C</td>
+                                   <td>Nam</td>
+                                   <td>12/24/2002</td>
+                              </tr>
+                              <tr>
+                                   <td>20120274</td>
+                                   <td>Lê Văn G</td>
+                                   <td>Nam</td>
+                                   <td>06/13/2002</td>
+                              </tr>
+                              <tr>
+                                   <td>20120634</td>
+                                   <td>Ngô Thị E</td>
+                                   <td>Nữ</td>
+                                   <td>10/10/2002</td>
+                              </tr>
+               
+                         </tbody>
+                    </table>
+                    
+               </div>
+
+               <div class="side">
+                    <div class="group">
+                         <h3 class="accordion__header">
+                              <i class="arrow_maximize"></i>
+                              <i class="ui-icon ui-icon-arrowthick-2-n-s"></i>
+                              News 01
+                         </h3>
+                         <p class="accordion__desc">content content content content content</p>
+
+                    </div>
+                    <div class="group">
+                         <h3 class="accordion__header">
+                              <i class="arrow_maximize"></i>
+                              <i class="ui-icon ui-icon-arrowthick-2-n-s"></i>
+                              News 02
+                         </h3>
+                         <p class="accordion__desc">content content content content content content content</p>
+                    </div>
+                    <div class="group">
+                         <h3 class="accordion__header">
+                              <i class="arrow_maximize"></i>
+                              <i class="ui-icon ui-icon-arrowthick-2-n-s"></i>
+                              News 03
+                         </h3>
+                         <p class="accordion__desc">content content content content content content content content
+                              content </p>
+                    </div>
+                    <div class="group">
+                         <h3 class="accordion__header">
+                              <i class="arrow_maximize"></i>
+                              <i class="ui-icon ui-icon-arrowthick-2-n-s"></i>
+                              News 04
+                         </h3>
+                         <p class="accordion__desc">content content content content content content content content
+                              content content content
+                              content </p>
+                    </div>
+               </div>
+          </div>
+          <hr />
+          <div class="footer">
+               <p>Copyright &copy; Nguyễn Văn Hào</p>
+               <a href="#" class="selected">Menu 1</a>
+               <div class="seperate">|</div>
+               <a href="#" class="">Menu 2</a>
+               <div class="seperate">|</div>
+               <a href="#" class="">Menu 3</a>
+               <div class="seperate">|</div>
+               <a href="#" class="">Menu 4</a>
+               <div class="seperate">|</div>
+               <a href="#" class="">Menu 5</a>
+          </div>
+     </div>
+</body>
+
+</html>
